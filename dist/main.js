@@ -1,1 +1,1 @@
-console.log("Gong hey fat choi!");
+(()=>{console.log("Gong hey fat choi!");const e=document.querySelector("body"),t=document.createElement("div");t.classList.add("headerParent"),e.appendChild(t);const n=document.createElement("h1");n.classList.add("headerItem"),n.textContent="好好食 中国餐厅 (Ho Sik Chinese Restaurant)",t.appendChild(n)})();

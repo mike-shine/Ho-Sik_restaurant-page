@@ -1,9 +1,17 @@
 * {
   background-color: red;
   color: white;
+  font-family: 'TAKOYAKI';
 }
 
-@font-face {
-  font-family: 'EggRoll';
-  src: url('/public/EggRoll-2pvK.otf') format('opentype');
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+p {
+  font-size: 24px;
 }

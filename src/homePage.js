@@ -59,20 +59,6 @@ paragraph.textContent += `Available for delivery on UberEats, GrubHub, PostMates
 paragraph.textContent += `Dim Sum: 8:00 A.M. - 1:30 P.M \r\n Lunch: 11:00 A.M. - 4:30 P.M. \r\n Dinner: 4:30 P.M. - 10:00 P.M.`;
 introText.appendChild(paragraph);
 
-// introText.appendChild(lineBreak);
-
-// const paragraph2 = document.createElement('p');
-// paragraph2.classList.add('introTextItem');
-// paragraph2.textContent = `Available for delivery on UberEats, GrubHub, PostMates, and Fantuan. For in-store pickup, please give us a call to place your order.`;
-// introText.appendChild(paragraph2);
-
-// introText.appendChild(lineBreak);
-
-// const paragraph3 = document.createElement('p');
-// paragraph3.classList.add('introTextItem');
-// paragraph3.textContent = `Dim Sum : 8:00 A.M. - 1:30 P.M \n Lunch: 11:00 A.M. - 4:30 P.M. \n Dinner: 4:30 P.M. - 10:00 P.M.`;
-// introText.appendChild(paragraph3);
-
 }
 
 

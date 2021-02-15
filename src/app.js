@@ -1,10 +1,9 @@
-console.log('Gong hey fat choi!');
-
-const body = document.querySelector('body');
+// const body = document.querySelector('body');
+const contentDiv = document.getElementById('content');
 
 const header = document.createElement('div');
 header.classList.add('headerParent');
-body.appendChild(header);
+contentDiv.appendChild(header);
 
 const h1 = document.createElement('h1');
 h1.classList.add('headerItem');

@@ -3,3 +3,7 @@
   color: white;
 }
 
+@font-face {
+  font-family: 'EggRoll';
+  src: url('/public/EggRoll-2pvK.otf') format('opentype');
+}

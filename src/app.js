@@ -25,6 +25,7 @@ menuTab.textContent = 'Menu';
 menuTab.addEventListener('click', () => {
   contentGoesHere.innerHTML = '';
   menu();
+  console.log(document)
 });
 allTabs.appendChild(menuTab);
 

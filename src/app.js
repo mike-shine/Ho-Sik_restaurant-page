@@ -13,20 +13,33 @@ contentDiv.appendChild(allTabs);
 const homeTab = document.createElement('button');
 homeTab.classList.add('tab');
 homeTab.textContent = 'Home';
-// event listener goes here
+homeTab.addEventListener('click', () => {
+  contentGoesHere.innerHTML = '';
+  homePage();
+});
 allTabs.appendChild(homeTab);
 
 const menuTab = document.createElement('button');
 menuTab.classList.add('tab');
 menuTab.textContent = 'Menu';
-//event listener here
+menuTab.addEventListener('click', () => {
+  contentGoesHere.innerHTML = '';
+  menu();
+});
 allTabs.appendChild(menuTab);
 
 const contactTab = document.createElement('button');
 contactTab.classList.add('tab');
 contactTab.textContent = 'Contact Us';
-//event listener here
+contactTab.addEventListener('click', () => {
+  contentGoesHere.innerHTML = '';
+  contactUs();
+});
 allTabs.appendChild(contactTab);
+
+const everythingBelowTabs = document.createElement('div');
+everythingBelowTabs.setAttribute('id', 'contentGoesHere');
+contentDiv.appendChild(everythingBelowTabs);
 
 
 

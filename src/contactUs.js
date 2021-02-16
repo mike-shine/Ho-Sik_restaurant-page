@@ -1,14 +1,14 @@
 const contactUs = () => {
 
-  const contentDiv = document.getElementById('content');
+  const contentGoesHere = document.getElementById('contentGoesHere');
 
   const header = document.createElement('div');
   header.classList.add('headerParent');
-  contentDiv.appendChild(header);
+  contentGoesHere.appendChild(header);
 
   const bodySection = document.createElement('div');
   bodySection.classList.add('bodyParent');
-  contentDiv.appendChild(bodySection);
+  contentGoesHere.appendChild(bodySection);
 
   const h1 = document.createElement('h1');
   h1.classList.add('headerItem');

@@ -56,8 +56,23 @@ const menu = () => {
   const noodlesAndRiceItems = document.createElement('p');
   noodlesAndRiceItems.classList.add('sectionItem');
   noodlesAndRiceItems.setAttribute('style', 'white-space: pre;');
-  noodlesAndRiceItems.textContent = 'Vegetarian Chow Mein - $8.99 \nBBQ Pork or Chicken Chow Mein - $10.99 \nShrimp Chow Mein - $11.49 \nHouse Special Lo Mein - $8.99 \nCurry Beef Noodle - $8.99 \n Vegetarian Fried Rice (entrée size) - $7.99 \nChicken or Pork Fried Rice (entrée size) - $9.99';
+  noodlesAndRiceItems.textContent = 'Vegetarian Chow Mein - $8.99 \nBBQ Pork or Chicken Chow Mein - $10.99 \nShrimp Chow Mein - $11.49 \nHouse Special Lo Mein - $8.99 \nCurry Beef Noodle - $8.99 \nVegetarian Fried Rice (entrée size) - $7.99 \nChicken or Pork Fried Rice (entrée size) - $9.99';
   noodlesAndRiceSection.appendChild(noodlesAndRiceItems);
+
+  const chefSpecialsSection = document.createElement('div');
+  chefSpecialsSection.classList.add('bodyItem', "sectionParent");
+  bodySection.appendChild(chefSpecialsSection);
+
+  const chefSpecialsHeading = document.createElement('h2');
+  chefSpecialsHeading.classList.add('sectionItem');
+  chefSpecialsHeading.textContent = 'Chef Specials';
+  chefSpecialsSection.appendChild(chefSpecialsHeading);
+
+  const chefSpecialsItems = document.createElement('p');
+  chefSpecialsItems.classList.add('sectionItem');
+  chefSpecialsItems.setAttribute('style', 'white-space: pre;');
+  chefSpecialsItems.textContent = 'Ma Po Tofu - $10.99 \nJalapeño Chicken - $11.99 \nOrange Sesame Beef - $12.99 \nShrimp with Lobster Sauce - $11.99 \nSeafood Delight - $15.99 \nSalt & Black Pepper Squid - $15.99  ';
+  chefSpecialsSection.appendChild(chefSpecialsItems);
 }
 
 export default menu;

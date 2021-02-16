@@ -1,5 +1,5 @@
 const homePage = () => {
-// const body = document.querySelector('body');
+
 const contentDiv = document.getElementById('content');
 const lineBreak = document.createElement('br');
 

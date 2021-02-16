@@ -73,6 +73,21 @@ const menu = () => {
   chefSpecialsItems.setAttribute('style', 'white-space: pre;');
   chefSpecialsItems.textContent = 'Ma Po Tofu - $10.99 \nJalapeño Chicken - $11.99 \nOrange Sesame Beef - $12.99 \nShrimp with Lobster Sauce - $11.99 \nSeafood Delight - $15.99 \nSalt & Black Pepper Squid - $15.99  ';
   chefSpecialsSection.appendChild(chefSpecialsItems);
+
+  const entreeSection = document.createElement('div');
+  entreeSection.classList.add('bodyItem', "sectionParent");
+  bodySection.appendChild(entreeSection);
+
+  const entreeHeading = document.createElement('h2');
+  entreeHeading.classList.add('sectionItem');
+  entreeHeading.textContent = 'Entrees';
+  entreeSection.appendChild(entreeHeading);
+
+  const entreeItems = document.createElement('p');
+  entreeItems.classList.add('sectionItem');
+  entreeItems.setAttribute('style', 'white-space: pre;');
+  entreeItems.textContent = '  ';
+  entreeSection.appendChild(entreeItems);
 }
 
 export default menu;

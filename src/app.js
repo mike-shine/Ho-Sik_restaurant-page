@@ -2,11 +2,23 @@ import homePage from './homePage.js';
 import contactUs from './contactUs.js';
 import menu from './menu.js';
 
+/* Tab content */
+
+
+
+
+
+/* Tab switching logic */
+
+window.addEventListener('DOMContentLoaded', function() {
+  homePage();
+})
+
 // homePage();
 
 // contactUs();
 
-menu();
+// menu();
 
 
 /*  Ideas to implement if time permits

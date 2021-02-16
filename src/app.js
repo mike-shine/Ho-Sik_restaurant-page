@@ -4,7 +4,29 @@ import menu from './menu.js';
 
 /* Tab content */
 
+const contentDiv = document.getElementById('content');
 
+const allTabs = document.createElement('div');
+allTabs.classList.add('allTabs');
+contentDiv.appendChild(allTabs);
+
+const homeTab = document.createElement('button');
+homeTab.classList.add('tab');
+homeTab.textContent = 'Home';
+// event listener goes here
+allTabs.appendChild(homeTab);
+
+const menuTab = document.createElement('button');
+menuTab.classList.add('tab');
+menuTab.textContent = 'Menu';
+//event listener here
+allTabs.appendChild(menuTab);
+
+const contactTab = document.createElement('button');
+contactTab.classList.add('tab');
+contactTab.textContent = 'Contact Us';
+//event listener here
+allTabs.appendChild(contactTab);
 
 
 

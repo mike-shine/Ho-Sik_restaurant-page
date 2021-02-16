@@ -88,6 +88,21 @@ const menu = () => {
   entreeItems.setAttribute('style', 'white-space: pre;');
   entreeItems.textContent = 'Chow Mein - $11.99 \nMoo Shu - $11.99 \nHunan - $11.99 \nSzechuan - $11.99 \nGarlic Sauce - $10.99 \nBlack Bean Sauce - $10.99 \nPeanut Kung Pao - $11.99 \nCashew - $11.99 \nMongolian - $10.99 \nPepper Steak Style - $11.99 \nGeneral Tso\'s Style - $10.99 \nOrange Chicken Style - $11.99 ';
   entreeSection.appendChild(entreeItems);
+
+  const sideSection = document.createElement('div');
+  sideSection.classList.add('bodyItem', "sectionParent");
+  bodySection.appendChild(sideSection);
+
+  const sideHeading = document.createElement('h2');
+  sideHeading.classList.add('sectionItem');
+  sideHeading.textContent = 'Side Orders';
+  sideSection.appendChild(sideHeading);
+
+  const sideItems = document.createElement('p');
+  sideItems.classList.add('sectionItem');
+  sideItems.setAttribute('style', 'white-space: pre;');
+  sideItems.textContent = 'White or Brown Rice - $0.99 \nFried Rice (vegetarian) - $1.99 \nFried Rice (choice of chicken or pork) - $2.49 \nChinese Pickled Cucumber - $2.99 \nVegetable of the Day - $4.99  ';
+  sideSection.appendChild(sideItems);
 }
 
 export default menu;

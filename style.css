@@ -22,3 +22,7 @@ button {
   background-color: black;
   color:white;
 }
+
+.tab {
+  border: 1px solid #ccc;
+}

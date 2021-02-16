@@ -17,4 +17,5 @@ menu();
  - Better layout than straight top to bottom (see China House example on MustHaveMenus)
  - Item descriptions for Chef Specials
  - Undercooked food warning at the bottom of the page
+ - Family style dinner combo section
 */

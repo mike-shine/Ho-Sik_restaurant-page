@@ -80,13 +80,13 @@ const menu = () => {
 
   const entreeHeading = document.createElement('h2');
   entreeHeading.classList.add('sectionItem');
-  entreeHeading.textContent = 'Entrees';
+  entreeHeading.textContent = 'Classic Entrees';
   entreeSection.appendChild(entreeHeading);
 
   const entreeItems = document.createElement('p');
   entreeItems.classList.add('sectionItem');
   entreeItems.setAttribute('style', 'white-space: pre;');
-  entreeItems.textContent = '  ';
+  entreeItems.textContent = 'Chow Mein - $11.99 \nMoo Shu - $11.99 \nHunan - $11.99 \nSzechuan - $11.99 \nGarlic Sauce - $10.99 \nBlack Bean Sauce - $10.99 \nPeanut Kung Pao - $11.99 \nCashew - $11.99 \nMongolian - $10.99 \nPepper Steak Style - $11.99 \nGeneral Tso\'s Style - $10.99 \nOrange Chicken Style - $11.99 ';
   entreeSection.appendChild(entreeItems);
 }
 

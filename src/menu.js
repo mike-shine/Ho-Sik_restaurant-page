@@ -1,6 +1,15 @@
 const menu = () => {
   const contentGoesHere = document.getElementById('contentGoesHere');
 
+  class MenuItem {
+    constructor(name, price, description) {
+      this.name = name;
+      this.price = price;
+      this.description = description;
+    }
+  }
+
+
 
   /* Large structural elements  */
   const header = document.createElement('div');
@@ -90,13 +99,16 @@ const menu = () => {
   chefSpecialsHeading.textContent = 'Chef Specials';
   chefSpecialsSection.appendChild(chefSpecialsHeading);
 
-  const chefSpecialsItems = document.createElement('p');
-  chefSpecialsItems.classList.add('sectionItem');
-  chefSpecialsItems.setAttribute('style', 'white-space: pre;');
-  chefSpecialsItems.textContent = 'Ma Po Tofu - $10.99 \nJalapeño Chicken - $11.99 \nOrange Sesame Beef - $12.99 \nShrimp with Lobster Sauce - $11.99 \nSeafood Delight - $15.99 \nSalt & Black Pepper Squid - $15.99  ';
-  chefSpecialsSection.appendChild(chefSpecialsItems);
+  const chefSpecialsItemContainer = document.createElement('div');
+  chefSpecialsItemContainer.classList.add('sectionItem');
+  chefSpecialsSection.appendChild(chefSpecialsItemContainer);
+  /*
+  const tofuSoup = new MenuItem('Tofu Soup', '9.99', 'A rich soup with tofu and vegetables.');
+  putItemOnMenu(tofuSoup, chefSpecialsItemContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+*/
 
 
+  // 'Ma Po Tofu - $10.99 \nJalapeño Chicken - $11.99 \nOrange Sesame Beef - $12.99 \nShrimp with Lobster Sauce - $11.99 \nSeafood Delight - $15.99 \nSalt & Black Pepper Squid - $15.99  ';
 
 
   /* entree menu section  */
@@ -146,6 +158,30 @@ const menu = () => {
   sideItems.setAttribute('style', 'white-space: pre;');
   sideItems.textContent = 'White or Brown Rice - $0.99 \nFried Rice (vegetarian) - $1.99 \nFried Rice (choice of chicken or pork) - $2.49 \nChinese Pickled Cucumber - $2.99 \nVegetable of the Day - $4.99  ';
   sideSection.appendChild(sideItems);
+
+
+/* function that takes constructed items and puts it on the menu/DOM  */
+
+  function putItemOnMenu(menuItem, container, itemClass, itemNameClass, itemDescriptionClass) {
+    const name = menuItem.name;
+    const price = menuItem.price;
+    const description = menuItem.description;
+
+    let wholeItem = document.createElement('div');
+    wholeItem.classList.add(itemClass);
+    container.appendChild(wholeItem);
+
+    let itemNameAndPrice = document.createElement('p');
+    itemNameAndPrice.classList.add(itemNameClass);
+    itemNameAndPrice.textContent = `${name} - $${price}`;
+    wholeItem.appendChild(itemNameAndPrice);
+
+    let itemDescription = document.createElement('p');
+    itemDescription.classList.add(itemDescriptionClass);
+    itemDescription.setAttribute('style', 'white-space: pre;');
+    itemDescription.textContent = `${description}`;
+    wholeItem.appendChild(itemDescription);
+  }
 }
 
 export default menu;

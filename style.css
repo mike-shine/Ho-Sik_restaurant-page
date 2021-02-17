@@ -1,11 +1,11 @@
 * {
   background-color: red;
   color: white;
+  font-family: 'Oswald', sans-serif;
 }
 
 h1 {
   font-size: 60px;
-  font-family: 'Oswald', sans-serif;
 }
 
 h2 {
@@ -15,7 +15,21 @@ h2 {
 
 p {
   font-size: 24px;
-  font-family: 'Oswald', sans-serif;
+}
+
+button {
+  font-size: 36px;
+}
+
+.menuItemName {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+.menuItemDescription {
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 1px;
 }
 
 
@@ -34,7 +48,7 @@ p {
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .tab:hover {

@@ -56,7 +56,7 @@ paragraph.classList.add('introTextItem');
 paragraph.setAttribute('style', 'white-space: pre;');
 paragraph.textContent = `We offer our customers delicious, authentically prepared southern Chinese cuisine at a reasonable price. \r\n`;
 paragraph.textContent += `Available for delivery on UberEats, GrubHub, PostMates, and Fantuan. For in-store pickup, please give us a call to place your order. \r\n`;
-paragraph.textContent += `Dim Sum: 8:00 A.M. - 1:30 P.M \r\n Lunch: 11:00 A.M. - 4:30 P.M. \r\n Dinner: 4:30 P.M. - 10:00 P.M.`;
+paragraph.textContent += 'Dim Sum: 8:00 A.M. - 1:30 P.M. \n    *(only on Friday, Saturday, and Sunday)*\nLunch: 11:00 A.M. - 4:30 P.M. \nDinner: 4:30 P.M. - 10:00 P.M.';
 introText.appendChild(paragraph);
 
 }

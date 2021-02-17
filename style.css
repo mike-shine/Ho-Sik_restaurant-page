@@ -55,3 +55,24 @@ p {
   to {opacity: 1;}
 }
 
+.headerParent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bodyParent {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin-left: 20%;
+  justify-content: space-between;
+
+}
+
+.bodyItem {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+

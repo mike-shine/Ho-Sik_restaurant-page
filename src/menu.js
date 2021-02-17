@@ -72,13 +72,24 @@ const menu = () => {
   soupHeading.textContent = 'Soups';
   soupSection.appendChild(soupHeading);
 
-  const soupItems = document.createElement('p');
-  soupItems.classList.add('sectionItem');
-  soupItems.setAttribute('style', 'white-space: pre;');
-  soupItems.textContent = 'Hot and Sour Soup - $4.49 \nWon Ton Soup - $4.49 \nSeafood Bean Curd Soup - $4.49 \nVegetable Soup - $4.49';
-  soupSection.appendChild(soupItems);
+  const soupItemsContainer = document.createElement('div');
+  soupItemsContainer.classList.add('sectionItem');
+  soupSection.appendChild(soupItemsContainer);
+
+  const hotAndSourSoup = new MenuItem('Hot and Sour Soup', '4.49');
+  addItemToMenu(hotAndSourSoup, soupItemsContainer, 'menuItem', 'menuItemName');
+
+  const wontonSoup = new MenuItem('Won Ton Soup', '4.49');
+  addItemToMenu(wontonSoup, soupItemsContainer, 'menuItem', 'menuItemName');
+
+  const seafoodSoup = new MenuItem('Seafood Bean Curd Soup', '4.49');
+  addItemToMenu(seafoodSoup, soupItemsContainer, 'menuItem', 'menuItemName');
+
+  const vegetableSoup = new MenuItem('Vegetable Soup', '3.99');
+  addItemToMenu(vegetableSoup, soupItemsContainer, 'menuItem', 'menuItemName');
 
 
+  // 'Hot and Sour Soup - $4.49 \nWon Ton Soup - $4.49 \nSeafood Bean Curd Soup - $4.49 \nVegetable Soup - $4.49';
 
 
   /* noodles and rice menu section  */

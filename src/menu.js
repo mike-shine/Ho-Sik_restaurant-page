@@ -39,11 +39,24 @@ const menu = () => {
   appetizerHeading.textContent = 'Appetizers';
   appetizerSection.appendChild(appetizerHeading);
 
-  const appetizerItems = document.createElement('p');
-  appetizerItems.classList.add('sectionItem');
-  appetizerItems.setAttribute('style', 'white-space: pre;');
-  appetizerItems.textContent = 'House Egg Roll - $1.79 \nPan-Fried Pork Dumplings (8) - $7.99 \nBeef on Sticks (4) - $9.99 \nEdamame - $3.99 \nSweet and Sour Ribs - $7.99';
-  appetizerSection.appendChild(appetizerItems);
+  const appetizerItemsContainer = document.createElement('div');
+  appetizerItemsContainer.classList.add('sectionItem');
+  appetizerSection.appendChild(appetizerItemsContainer);
+
+  const eggRoll = new MenuItem('House Egg Roll', '1.79');
+  addItemToMenu(eggRoll, appetizerItemsContainer, 'menuItem', 'menuItemName');
+
+  const dumplings = new MenuItem('Pan-Fried Pork Dumplings (8)', '7.99');
+  addItemToMenu(dumplings, appetizerItemsContainer, 'menuItem', 'menuItemName');
+
+  const beefOnStick = new MenuItem('Beef on Sticks (4)', '9.99');
+  addItemToMenu(beefOnStick, appetizerItemsContainer, 'menuItem', 'menuItemName');
+
+  const edamame = new MenuItem('Edamame', '3.99');
+  addItemToMenu(edamame, appetizerItemsContainer, 'menuItem', 'menuItemName');
+
+  const sweetnsourribs = new MenuItem('Sweet and Sour Ribs', '7.99');
+  addItemToMenu(sweetnsourribs, appetizerItemsContainer, 'menuItem', 'menuItemName');
 
 
 
@@ -79,7 +92,7 @@ const menu = () => {
   noodlesAndRiceHeading.textContent = 'Noodles & Rice';
   noodlesAndRiceSection.appendChild(noodlesAndRiceHeading);
 
-  const noodlesAndRiceItemsContainer = document.createElement('p');
+  const noodlesAndRiceItemsContainer = document.createElement('div');
   noodlesAndRiceItemsContainer.classList.add('sectionItem');
   noodlesAndRiceSection.appendChild(noodlesAndRiceItemsContainer);
 

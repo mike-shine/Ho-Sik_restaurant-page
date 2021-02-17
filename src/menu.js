@@ -147,11 +147,35 @@ const menu = () => {
   entreeSubHeading.style.fontStyle = 'italic'
   entreeHeadingContainer.appendChild(entreeSubHeading);
 
-  const entreeItems = document.createElement('p');
-  entreeItems.classList.add('sectionItem');
-  entreeItems.setAttribute('style', 'white-space: pre;');
-  entreeItems.textContent = 'Chow Mein - $11.99 \nMoo Shu - $11.99 \nHunan - $11.99 \nSzechuan - $11.99 \nGarlic Sauce - $10.99 \nBlack Bean Sauce - $10.99 \nPeanut Kung Pao - $11.99 \nCashew - $11.99 \nMongolian - $10.99 \nPepper Steak Style - $11.99 \nGeneral Tso\'s Style - $10.99 \nOrange Chicken Style - $11.99 ';
-  entreeSection.appendChild(entreeItems);
+  const entreeItemsContainer = document.createElement('div');
+  entreeItemsContainer.classList.add('sectionItem');
+  entreeSection.appendChild(entreeItemsContainer);
+
+  /* Entrees being constructed and added to menu  */
+
+  const chowMein = new MenuItem('Chow Mein', '11.99', 'White sauce, bean sprouts, cabbages, celery, \ngreen and white onions, and bamboo shoots');
+  addItemToMenu(chowMein, entreeItemsContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+
+  const mooShu = new MenuItem('Moo Shu', '11.99', 'Sweet brown sauce, broccoli, red bell \npeppers, snow peas, green bell peppers, white \nonion, mushroom, water chestnuts, bamboo shoots, \ncabbage, and baby corn');
+  addItemToMenu(mooShu, entreeItemsContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+
+  const hunan = new MenuItem('Hunan', '11.99', 'Chili brown sauce, broccoli, red bell \npeppers, snow peas, green bell peppers, \nwhite onion, mushroom, water chestnut, \nbamboo shoots, and Chinese cabbage');
+  addItemToMenu(hunan, entreeItemsContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+
+  const szechuan = new MenuItem('Szechuan', '11.99', 'Chili brown sauce, carrot, green onion, \ncelery, and bamboo shoots');
+  addItemToMenu(szechuan, entreeItemsContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+
+  const garlicSauce = new MenuItem('Garlic Sauce', '10.99', 'Sweet chili brown sauce, red and \n green bell peppers, white onions, bamboo \nshoots, and carrots');
+  addItemToMenu(garlicSauce, entreeItemsContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+
+  const blackBeanSauce = new MenuItem('Black Bean Sauce', '10.99', 'Spicy black bean sauce, red and \n green bell peppers, white onions, and bamboo shoots');
+  addItemToMenu(blackBeanSauce, entreeItemsContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+
+  const peanutKungPao = new MenuItem('Peanut Kung Pao', '11.99', 'Chili brown sauce, carrots, celery, water chestnuts, and \ngreen bell pepper, topped with peanuts')
+  addItemToMenu(peanutKungPao, entreeItemsContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+
+
+   // entreeItems.textContent = 'Peanut Kung Pao - $11.99 \nCashew - $11.99 \nMongolian - $10.99 \nPepper Steak Style - $11.99 \nGeneral Tso\'s Style - $10.99 \nOrange Chicken Style - $11.99 ';
 
 
 

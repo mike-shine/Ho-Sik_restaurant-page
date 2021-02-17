@@ -57,25 +57,26 @@ header.appendChild(h1);
   //// anchor tag with class next and an eventListener on plusSlides function, param of 1. text content is &#10095;
 
   const imageCarousel = document.createElement('div');
-  imageCarousel.style.width = 'auto';
-  imageCarousel.style.height = 'auto';
-  bodySection.appendChild(imageCarousel);
+  imageCarousel.classList.add('imageCarousel');
+  // imageCarousel.style.width = 'auto';
+  // imageCarousel.style.height = 'auto';
+  contentGoesHere.appendChild(imageCarousel);
 
   const previousButton = document.createElement('a');
   previousButton.classList.add('previous');
-  previousButton.addEventListener('click', () => console.log('previous image'));
+  previousButton.addEventListener('click', () => changeImages(-1));
   previousButton.textContent = '❮';
   imageCarousel.appendChild(previousButton);
 
   const nextButton = document.createElement('a');
   nextButton.classList.add('next');
-  nextButton.addEventListener('click', () => console.log('next image'));
+  nextButton.addEventListener('click', () => changeImages(1));
   nextButton.textContent = '❯';
   imageCarousel.appendChild(nextButton);
 
   addImagesToCarousel('baoPic.jpg', '../public/images-on-homepage', 0, 3);
-  // addImagesToCarousel('dimSumPic.jpg', '../public/images-on-homepage', 1, 3);
-  // addImagesToCarousel('shrimpPic.jpg', '../public/images-on-homepage', 2, 3);
+  addImagesToCarousel('dimSumPic.jpg', '../public/images-on-homepage', 1, 3);
+  addImagesToCarousel('shrimpPic.jpg', '../public/images-on-homepage', 2, 3);
 
   function addImagesToCarousel(name, path, index, howManyPics) {
 
@@ -92,11 +93,31 @@ header.appendChild(h1);
     actualPicture.src = `${path}/${name}`;
     actualPicture.style.width = '100%';
     newImage.appendChild(actualPicture);
-
-
-
   }
 
+  let imageIndex = 1;
+
+  function changeImages(number) {
+    displayImages(imageIndex += number);
+  }
+
+  function displayImages(activeImage) {
+    const allImages = document.getElementsByClassName('images');
+    if (activeImage > allImages.length) {
+      imageIndex = 1;
+    }
+    if (activeImage < 1) {
+      imageIndex = allImages.length;
+    }
+    for (let i = 0; i < allImages.length; i++) {
+      allImages[i].style.display = 'none';
+    }
+
+    // allImages.forEach((item, index) => {
+    //   allImages[index].style.display = 'none';
+    // });
+    allImages[imageIndex - 1].style.display = 'block';
+  }
 
 
 

@@ -45,7 +45,7 @@ header.appendChild(h1);
   function addImagesToCarousel(name, path, index, howManyPics) {
 
     const newImage = document.createElement('div');
-    newImage.classList.add('images', 'fade');
+    newImage.classList.add('images', 'fade', 'blurredEdges');
     imageCarousel.appendChild(newImage);
 
     const imagePosition = document.createElement('div');

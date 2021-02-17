@@ -78,8 +78,6 @@ window.addEventListener('DOMContentLoaded', function() {
 
 /*  Ideas to implement if time permits
 
- - Image carousel on homepage
-
  - Family style dinner combo section
 
  - Menu soup section: Soup of the day on daily rotation for discount

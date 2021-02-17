@@ -83,11 +83,21 @@ const menu = () => {
   noodlesAndRiceItemsContainer.classList.add('sectionItem');
   noodlesAndRiceSection.appendChild(noodlesAndRiceItemsContainer);
 
-  const vegetarianChowMein = new MenuItem('Vegetarian Chow Mein', '8.99');
-  addItemToMenu(vegetarianChowMein, noodlesAndRiceItemsContainer, 'menuItem', 'menuItemName');
+  const vegetarianChowMein = new MenuItem('Vegetarian Chow Mein', '8.99', 'add chicken - $2 \nadd BBQ pork - $2 \nadd shrimp - $2.50');
+  addItemToMenu(vegetarianChowMein, noodlesAndRiceItemsContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+
+  const vegetarianFriedRice = new MenuItem('Vegetarian Fried Rice', '7.99', 'add chicken - $2 \nadd BBQ pork - $2 \nadd shrimp - $2.50');
+  addItemToMenu(vegetarianFriedRice, noodlesAndRiceItemsContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+
+  const loMein = new MenuItem('House Special Lo Mein', '7.99');
+  addItemToMenu(loMein, noodlesAndRiceItemsContainer, 'menuItem', 'menuItemName');
+
+  const curryBeefNoodle = new MenuItem('Curry Beef Noodle', '8.99');
+  addItemToMenu(curryBeefNoodle, noodlesAndRiceItemsContainer, 'menuItem', 'menuItemName');
 
 
-  // 'Vegetarian Chow Mein - $8.99 \nBBQ Pork or Chicken Chow Mein - $10.99 \nShrimp Chow Mein - $11.49 \nHouse Special Lo Mein - $8.99 \nCurry Beef Noodle - $8.99 \nVegetarian Fried Rice (entrée size) - $7.99 \nChicken or Pork Fried Rice (entrée size) - $9.99';
+
+  // 'House Special Lo Mein - $8.99 \nCurry Beef Noodle - $8.99 ;
 
 
 

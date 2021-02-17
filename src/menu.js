@@ -1,5 +1,7 @@
 const menu = () => {
   const contentGoesHere = document.getElementById('contentGoesHere');
+
+
   /* Large structural elements  */
   const header = document.createElement('div');
   header.classList.add('headerParent');
@@ -107,6 +109,11 @@ const menu = () => {
   entreeHeading.classList.add('sectionItem');
   entreeHeading.textContent = 'Classic Entrees';
   entreeSection.appendChild(entreeHeading);
+
+  const entreeSubHeading = document.createElement('h6');
+  entreeSubHeading.classList.add('sectionItem', 'subHeading');
+  entreeSubHeading.textContent = 'Choice of Veggie, Pork, Chicken, \nTofu, Shrimp (+$1), or Steak (+$2)';
+  entreeSection.appendChild(entreeSubHeading);
 
   const entreeItems = document.createElement('p');
   entreeItems.classList.add('sectionItem');

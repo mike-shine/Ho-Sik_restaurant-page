@@ -174,8 +174,20 @@ const menu = () => {
   const peanutKungPao = new MenuItem('Peanut Kung Pao', '11.99', 'Chili brown sauce, carrots, celery, water chestnuts, and \ngreen bell pepper, topped with peanuts')
   addItemToMenu(peanutKungPao, entreeItemsContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
 
+  const cashew = new MenuItem('Cashew', '11.99', 'Brown sauce with mushrooms, carrots, celery, water \nchestnuts, and green bell pepper, topped with cashews');
+  addItemToMenu(cashew, entreeItemsContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
 
-   // entreeItems.textContent = 'Peanut Kung Pao - $11.99 \nCashew - $11.99 \nMongolian - $10.99 \nPepper Steak Style - $11.99 \nGeneral Tso\'s Style - $10.99 \nOrange Chicken Style - $11.99 ';
+  const mongolian = new MenuItem('Mongolian Style', '10.99', 'Sweet Mongolian sauce with white and \ngreen onions');
+  addItemToMenu(mongolian, entreeItemsContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+
+  const pepperSteak = new MenuItem('Pepper Steak style', '11.99', 'Brown sauce with white and green onion');
+  addItemToMenu(pepperSteak, entreeItemsContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+
+  const generalTsosStyle = new MenuItem('General Tso\'s style', '10.99', 'Sweet chili with red-brown glaze');
+  addItemToMenu(generalTsosStyle, entreeItemsContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+
+  const orangeChickenStyle = new MenuItem('Orange Chicken style', '11.99', 'Sweet chili with red-brown glaze orange drizzle');
+  addItemToMenu(orangeChickenStyle, entreeItemsContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
 
 
 

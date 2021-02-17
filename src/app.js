@@ -15,6 +15,7 @@ homeTab.classList.add('tab');
 homeTab.textContent = 'Home';
 homeTab.addEventListener('click', () => {
   contentGoesHere.innerHTML = '';
+  // switchActiveTab('Home');
   homePage();
 });
 allTabs.appendChild(homeTab);
@@ -24,6 +25,7 @@ menuTab.classList.add('tab');
 menuTab.textContent = 'Menu';
 menuTab.addEventListener('click', () => {
   contentGoesHere.innerHTML = '';
+  // switchActiveTab('Menu');
   menu();
 });
 allTabs.appendChild(menuTab);
@@ -33,27 +35,48 @@ contactTab.classList.add('tab');
 contactTab.textContent = 'Contact Us';
 contactTab.addEventListener('click', () => {
   contentGoesHere.innerHTML = '';
+  // console.log(document.getElementsByClassName('tab')[0].textContent);
+  // switchActiveTab('Contact Us');
   contactUs();
+
 });
 allTabs.appendChild(contactTab);
 
 const everythingBelowTabs = document.createElement('div');
 everythingBelowTabs.setAttribute('id', 'contentGoesHere');
+everythingBelowTabs.setAttribute('class', 'tabContent');
 contentDiv.appendChild(everythingBelowTabs);
+
+
+
+
+
+  // iterate through, set all style displays to none
+  // if 'active' is found in classList
+  // replace with empty string?
+
+  // const switchActiveTab = function(newTab) {
+  //   const tabs = [document.getElementsByClassName('tab')];
+  //   tabs.forEach((tab) => {
+  //     if ([tab.classList].includes('active')) {
+  //       [tab.classList].replace('active', '');
+  //     }
+  //     if (tab.textContent === newTab) {
+  //       [tab.classList].add('active');
+  //     }
+  //   });
+  // }
+
 
 
 
 /* Tab switching logic */
 
 window.addEventListener('DOMContentLoaded', function() {
+  // switchActiveTab('Home');
   homePage();
-})
+});
 
-// homePage();
-
-// contactUs();
-
-// menu();
 
 
 /*  Ideas to implement if time permits

@@ -18,11 +18,40 @@ p {
   font-family: 'Oswald', sans-serif;
 }
 
-button {
-  background-color: black;
-  color:white;
+
+.allTabs {
+  border: 0.5px solid #ccc;
+  background-color: #232b2b;
+  overflow: hidden;
 }
 
 .tab {
-  border: 1px solid #ccc;
+  color: #ffe4cd;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
 }
+
+.tab:hover {
+  background-color: #ffe4cd;
+  color:#232b2b
+}
+
+.active {
+  background-color: #ccc;
+}
+
+.tabContent {
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+

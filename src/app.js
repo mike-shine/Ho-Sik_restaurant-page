@@ -17,12 +17,13 @@ homeTab.addEventListener('click', (e) => {
   contentGoesHere.innerHTML = '';
   // switchActiveTab('Home');
   e.preventDefault();
-  everythingBelowTabs.classList.remove('runAnimation');
-  homeTab.classList.remove('active');
-  void everythingBelowTabs.offsetHeight;
-  everythingBelowTabs.classList.add('runAnimation');
-  homeTab.classList.add('active');
-  homePage();
+  fadeInContentandActivateTab(homeTab, homePage);
+  // everythingBelowTabs.classList.remove('runAnimation');
+  // homeTab.classList.remove('active');
+  // void everythingBelowTabs.offsetHeight;
+  // everythingBelowTabs.classList.add('runAnimation');
+  // homeTab.classList.add('active');
+  // homePage();
 });
 allTabs.appendChild(homeTab);
 
@@ -33,12 +34,13 @@ menuTab.addEventListener('click', (e) => {
   contentGoesHere.innerHTML = '';
   // switchActiveTab('Menu');
   e.preventDefault();
-  everythingBelowTabs.classList.remove('runAnimation');
-  menuTab.classList.remove('active');
-  void everythingBelowTabs.offsetHeight;
-  everythingBelowTabs.classList.add('runAnimation');
-  menuTab.classList.add('active');
-  menu();
+  fadeInContentandActivateTab(menuTab, menu);
+  // everythingBelowTabs.classList.remove('runAnimation');
+  // menuTab.classList.remove('active');
+  // void everythingBelowTabs.offsetHeight;
+  // everythingBelowTabs.classList.add('runAnimation');
+  // menuTab.classList.add('active');
+  // menu();
 }, false);
 allTabs.appendChild(menuTab);
 
@@ -68,7 +70,14 @@ contentDiv.appendChild(everythingBelowTabs);
 
 function fadeInContentandActivateTab(tabName, pageName) {
   everythingBelowTabs.classList.remove('runAnimation');
-  tabName.classList.remove('active');
+  const tabs = [document.getElementsByClassName('tab')];
+  tabs.forEach((tab) => {
+    console.log(tab[0].classList);
+    tab[0].classList.remove('active');
+    tab[1].classList.remove('active');
+    tab[2].classList.remove('active');
+  })
+  // tabName.classList.remove('active');
   void everythingBelowTabs.offsetHeight;
   everythingBelowTabs.classList.add('runAnimation');
   tabName.classList.add('active');

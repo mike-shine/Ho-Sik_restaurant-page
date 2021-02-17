@@ -16,30 +16,74 @@ h1.classList.add('headerItem');
 h1.textContent = '好好食 中国餐厅 (Ho Ho Sik Chinese Restaurant)';
 header.appendChild(h1);
 
-const pictureDiv = document.createElement('div');
-pictureDiv.classList.add('pictureParent', 'bodyItem');
-bodySection.appendChild(pictureDiv);
+// const pictureDiv = document.createElement('div');
+// pictureDiv.classList.add('pictureParent', 'bodyItem');
+// bodySection.appendChild(pictureDiv);
 
-const dimSumPic = document.createElement('img');
-dimSumPic.src = '../public/dimSumPic.jpg';
-dimSumPic.classList.add('pictureItem');
-dimSumPic.style.width = '300px';
-dimSumPic.style.height = 'auto';
-pictureDiv.appendChild(dimSumPic);
+// const dimSumPic = document.createElement('img');
+// dimSumPic.src = '../public/dimSumPic.jpg';
+// dimSumPic.classList.add('pictureItem');
+// dimSumPic.style.width = '300px';
+// dimSumPic.style.height = 'auto';
+// pictureDiv.appendChild(dimSumPic);
 
-const shrimpPic = document.createElement('img');
-shrimpPic.src = '../public/shrimpPic.jpg';
-shrimpPic.classList.add('pictureItem');
-shrimpPic.style.width = '300px';
-shrimpPic.style.height = 'auto';
-pictureDiv.appendChild(shrimpPic);
+// const shrimpPic = document.createElement('img');
+// shrimpPic.src = '../public/shrimpPic.jpg';
+// shrimpPic.classList.add('pictureItem');
+// shrimpPic.style.width = '300px';
+// shrimpPic.style.height = 'auto';
+// pictureDiv.appendChild(shrimpPic);
 
-const baoPic = document.createElement('img');
-baoPic.src = '../public/baoPic.jpg';
-baoPic.classList.add('pictureItem');
-baoPic.style.width = '200px';
-baoPic.style.height = 'auto';
-pictureDiv.appendChild(baoPic);
+// const baoPic = document.createElement('img');
+// baoPic.src = '../public/baoPic.jpg';
+// baoPic.classList.add('pictureItem');
+// baoPic.style.width = '200px';
+// baoPic.style.height = 'auto';
+// pictureDiv.appendChild(baoPic);
+
+
+/* Image carousel  */
+
+// s̶l̶i̶d̶e̶s̶h̶o̶w̶ c̶o̶n̶t̶a̶i̶n̶e̶r̶ d̶i̶v̶
+
+  // d̶i̶v̶ w̶i̶t̶h̶ c̶l̶a̶s̶s̶e̶s̶ m̶y̶S̶l̶i̶d̶e̶s̶ a̶n̶d̶ f̶a̶d̶e̶
+    // d̶i̶v̶ w̶i̶t̶h̶ c̶l̶a̶s̶s̶ n̶u̶m̶b̶e̶r̶T̶e̶x̶t̶ a̶n̶d̶ t̶e̶x̶t̶ o̶f̶ t̶h̶e̶ p̶i̶c̶'̶s̶ r̶e̶l̶a̶t̶i̶v̶e̶   l̶o̶c̶a̶t̶i̶o̶n̶ (̶1̶/̶3̶,̶ 3̶/̶7̶,̶ e̶t̶c̶)̶
+    // i̶m̶g̶ w̶i̶t̶h̶ s̶r̶c̶ a̶n̶d̶ 1̶0̶0̶%̶ w̶i̶d̶t̶h̶
+    // div with class text and the text of the caption
+  // (repeat above three lines for as many images as you have)
+
+  // next and previous buttons
+  // anchor tag with class prev and an eventListener on plusSlides function, param of -1. text content is &#10094;
+  //// anchor tag with class next and an eventListener on plusSlides function, param of 1. text content is &#10095;
+
+  const imageCarousel = document.createElement('div');
+  bodySection.appendChild(imageCarousel);
+
+  function addImagesToCarousel(name, path, index, array) {
+    const imageName = name;
+
+    const newImage = document.createElement('div');
+    newImage.classList.add('images', 'fade');
+    imageCarousel.appendChild(newImage);
+
+    const imagePosition = document.createElement('div');
+    imagePosition.classList.add('imagePosition');
+    imagePosition.textContent = `${index + 1} of ${numberOfPicsInFolder}`;
+    newImage.appendChild(imagePosition);
+
+    const actualPicture = document.createElement('img');
+    actualPicture.src = path;
+    actualPicture.style.width = '100%';
+    newImage.appendChild(actualPicture);
+
+
+
+  }
+
+
+
+
+
 
 const introText = document.createElement('div')
 introText.classList.add('bodyItem', 'introTextParent');

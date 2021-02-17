@@ -45,6 +45,8 @@ allTabs.appendChild(contactTab);
 
 
 
+
+
 /* Tab content structural elements and tab switching function  */
 
 const everythingBelowTabs = document.createElement('div');

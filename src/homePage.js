@@ -49,8 +49,8 @@ header.appendChild(h1);
   // d̶i̶v̶ w̶i̶t̶h̶ c̶l̶a̶s̶s̶e̶s̶ m̶y̶S̶l̶i̶d̶e̶s̶ a̶n̶d̶ f̶a̶d̶e̶
     // d̶i̶v̶ w̶i̶t̶h̶ c̶l̶a̶s̶s̶ n̶u̶m̶b̶e̶r̶T̶e̶x̶t̶ a̶n̶d̶ t̶e̶x̶t̶ o̶f̶ t̶h̶e̶ p̶i̶c̶'̶s̶ r̶e̶l̶a̶t̶i̶v̶e̶   l̶o̶c̶a̶t̶i̶o̶n̶ (̶1̶/̶3̶,̶ 3̶/̶7̶,̶ e̶t̶c̶)̶
     // i̶m̶g̶ w̶i̶t̶h̶ s̶r̶c̶ a̶n̶d̶ 1̶0̶0̶%̶ w̶i̶d̶t̶h̶
-    // div with class text and the text of the caption
-  // (repeat above three lines for as many images as you have)
+    // d̶i̶v̶ w̶i̶t̶h̶ c̶l̶a̶s̶s̶ t̶e̶x̶t̶ a̶n̶d̶ t̶h̶e̶ t̶e̶x̶t̶ o̶f̶ t̶h̶e̶ c̶a̶p̶t̶i̶o̶n̶
+  // (̶r̶e̶p̶e̶a̶t̶ a̶b̶o̶v̶e̶ t̶h̶r̶e̶e̶ l̶i̶n̶e̶s̶ f̶o̶r̶ a̶s̶ m̶a̶n̶y̶ i̶m̶a̶g̶e̶s̶ a̶s̶ y̶o̶u̶ h̶a̶v̶e̶)̶
 
   // next and previous buttons
   // anchor tag with class prev and an eventListener on plusSlides function, param of -1. text content is &#10094;
@@ -59,8 +59,19 @@ header.appendChild(h1);
   const imageCarousel = document.createElement('div');
   bodySection.appendChild(imageCarousel);
 
-  function addImagesToCarousel(name, path, index, array) {
-    const imageName = name;
+  const previousButton = document.createElement('a');
+  previousButton.classList.add('previous');
+  previousButton.addEventListener('click', () => console.log('previous image'));
+  previousButton.textContent = '&#10094';
+
+  const nextButton = document.createElement('a');
+  nextButton.classList.add('next');
+  nextButton.addEventListener('click', () => console.log('next image'));
+  nextButton.textContent = '&#10095';
+
+  addImagesToCarousel('baoPic.jpg', '../public/images-on-homepage', 0, 3)
+
+  function addImagesToCarousel(name, path, index, howManyPics) {
 
     const newImage = document.createElement('div');
     newImage.classList.add('images', 'fade');
@@ -68,11 +79,11 @@ header.appendChild(h1);
 
     const imagePosition = document.createElement('div');
     imagePosition.classList.add('imagePosition');
-    imagePosition.textContent = `${index + 1} of ${numberOfPicsInFolder}`;
+    imagePosition.textContent = `${index + 1} of ${howManyPics}`;
     newImage.appendChild(imagePosition);
 
     const actualPicture = document.createElement('img');
-    actualPicture.src = path;
+    actualPicture.src = `${path}/${name}`;
     actualPicture.style.width = '100%';
     newImage.appendChild(actualPicture);
 

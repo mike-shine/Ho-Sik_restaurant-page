@@ -52,27 +52,30 @@ header.appendChild(h1);
     // d̶i̶v̶ w̶i̶t̶h̶ c̶l̶a̶s̶s̶ t̶e̶x̶t̶ a̶n̶d̶ t̶h̶e̶ t̶e̶x̶t̶ o̶f̶ t̶h̶e̶ c̶a̶p̶t̶i̶o̶n̶
   // (̶r̶e̶p̶e̶a̶t̶ a̶b̶o̶v̶e̶ t̶h̶r̶e̶e̶ l̶i̶n̶e̶s̶ f̶o̶r̶ a̶s̶ m̶a̶n̶y̶ i̶m̶a̶g̶e̶s̶ a̶s̶ y̶o̶u̶ h̶a̶v̶e̶)̶
 
-  // next and previous buttons
+  // n̶e̶x̶t̶ a̶n̶d̶ p̶r̶e̶v̶i̶o̶u̶s̶ b̶u̶t̶t̶o̶n̶s̶
   // anchor tag with class prev and an eventListener on plusSlides function, param of -1. text content is &#10094;
   //// anchor tag with class next and an eventListener on plusSlides function, param of 1. text content is &#10095;
 
   const imageCarousel = document.createElement('div');
-  imageCarousel.style.width = '1500px';
-  // bodySection.appendChild(imageCarousel);
+  imageCarousel.style.width = 'auto';
+  imageCarousel.style.height = 'auto';
+  bodySection.appendChild(imageCarousel);
 
   const previousButton = document.createElement('a');
   previousButton.classList.add('previous');
   previousButton.addEventListener('click', () => console.log('previous image'));
-  previousButton.textContent = '&#10094';
+  previousButton.textContent = '❮';
+  imageCarousel.appendChild(previousButton);
 
   const nextButton = document.createElement('a');
   nextButton.classList.add('next');
   nextButton.addEventListener('click', () => console.log('next image'));
-  nextButton.textContent = '&#10095';
+  nextButton.textContent = '❯';
+  imageCarousel.appendChild(nextButton);
 
   addImagesToCarousel('baoPic.jpg', '../public/images-on-homepage', 0, 3);
-  addImagesToCarousel('dimSumPic.jpg', '../public/images-on-homepage', 1, 3);
-  addImagesToCarousel('shrimpPic.jpg', '../public/images-on-homepage', 2, 3);
+  // addImagesToCarousel('dimSumPic.jpg', '../public/images-on-homepage', 1, 3);
+  // addImagesToCarousel('shrimpPic.jpg', '../public/images-on-homepage', 2, 3);
 
   function addImagesToCarousel(name, path, index, howManyPics) {
 

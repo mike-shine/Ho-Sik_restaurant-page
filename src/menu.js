@@ -79,11 +79,15 @@ const menu = () => {
   noodlesAndRiceHeading.textContent = 'Noodles & Rice';
   noodlesAndRiceSection.appendChild(noodlesAndRiceHeading);
 
-  const noodlesAndRiceItems = document.createElement('p');
-  noodlesAndRiceItems.classList.add('sectionItem');
-  noodlesAndRiceItems.setAttribute('style', 'white-space: pre;');
-  noodlesAndRiceItems.textContent = 'Vegetarian Chow Mein - $8.99 \nBBQ Pork or Chicken Chow Mein - $10.99 \nShrimp Chow Mein - $11.49 \nHouse Special Lo Mein - $8.99 \nCurry Beef Noodle - $8.99 \nVegetarian Fried Rice (entrée size) - $7.99 \nChicken or Pork Fried Rice (entrée size) - $9.99';
-  noodlesAndRiceSection.appendChild(noodlesAndRiceItems);
+  const noodlesAndRiceItemsContainer = document.createElement('p');
+  noodlesAndRiceItemsContainer.classList.add('sectionItem');
+  noodlesAndRiceSection.appendChild(noodlesAndRiceItemsContainer);
+
+  const vegetarianChowMein = new MenuItem('Vegetarian Chow Mein', '8.99');
+  addItemToMenu(vegetarianChowMein, noodlesAndRiceItemsContainer, 'menuItem', 'menuItemName');
+
+
+  // 'Vegetarian Chow Mein - $8.99 \nBBQ Pork or Chicken Chow Mein - $10.99 \nShrimp Chow Mein - $11.49 \nHouse Special Lo Mein - $8.99 \nCurry Beef Noodle - $8.99 \nVegetarian Fried Rice (entrée size) - $7.99 \nChicken or Pork Fried Rice (entrée size) - $9.99';
 
 
 
@@ -229,7 +233,9 @@ const menu = () => {
     let itemDescription = document.createElement('p');
     itemDescription.classList.add(itemDescriptionClass);
     itemDescription.setAttribute('style', 'white-space: pre;');
-    itemDescription.textContent = `${description}`;
+    (!description)
+    ? itemDescription.textContent = ''
+    : itemDescription.textContent = `${description}`;
     wholeItem.appendChild(itemDescription);
   }
 }

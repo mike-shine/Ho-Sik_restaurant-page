@@ -47,10 +47,6 @@ p {
   color:#232b2b;
 }
 
-/* .tabContent {
-  animation: fadeEffect 1s;
-} */
-
 .runAnimation {
   position: relative;
   animation: fadeEffect 0.5s;

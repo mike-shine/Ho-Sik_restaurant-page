@@ -2,7 +2,9 @@ import homePage from './homePage.js';
 import contactUs from './contactUs.js';
 import menu from './menu.js';
 
-/* Tab content */
+
+
+/* Tab elements and event listeners */
 
 const contentDiv = document.getElementById('content');
 
@@ -15,15 +17,8 @@ homeTab.classList.add('tab');
 homeTab.textContent = 'Home';
 homeTab.addEventListener('click', (e) => {
   contentGoesHere.innerHTML = '';
-  // switchActiveTab('Home');
   e.preventDefault();
   fadeInContentandActivateTab(homeTab, homePage);
-  // everythingBelowTabs.classList.remove('runAnimation');
-  // homeTab.classList.remove('active');
-  // void everythingBelowTabs.offsetHeight;
-  // everythingBelowTabs.classList.add('runAnimation');
-  // homeTab.classList.add('active');
-  // homePage();
 });
 allTabs.appendChild(homeTab);
 
@@ -32,15 +27,8 @@ menuTab.classList.add('tab');
 menuTab.textContent = 'Menu';
 menuTab.addEventListener('click', (e) => {
   contentGoesHere.innerHTML = '';
-  // switchActiveTab('Menu');
   e.preventDefault();
   fadeInContentandActivateTab(menuTab, menu);
-  // everythingBelowTabs.classList.remove('runAnimation');
-  // menuTab.classList.remove('active');
-  // void everythingBelowTabs.offsetHeight;
-  // everythingBelowTabs.classList.add('runAnimation');
-  // menuTab.classList.add('active');
-  // menu();
 }, false);
 allTabs.appendChild(menuTab);
 
@@ -49,19 +37,15 @@ contactTab.classList.add('tab');
 contactTab.textContent = 'Contact Us';
 contactTab.addEventListener('click', (e) => {
   contentGoesHere.innerHTML = '';
-  // console.log(document.getElementsByClassName('tab')[0].textContent);
-  // switchActiveTab('Contact Us');
   e.preventDefault();
   fadeInContentandActivateTab(contactTab, contactUs);
-  // everythingBelowTabs.classList.remove('runAnimation');
-  // contactTab.classList.remove('active');
-  // void everythingBelowTabs.offsetHeight;
-  // everythingBelowTabs.classList.add('runAnimation');
-  // contactTab.classList.add('active');
-  // contactUs();
-
 }, false);
 allTabs.appendChild(contactTab);
+
+
+
+
+/* Tab content structural elements and tab switching function  */
 
 const everythingBelowTabs = document.createElement('div');
 everythingBelowTabs.setAttribute('id', 'contentGoesHere');
@@ -72,45 +56,20 @@ function fadeInContentandActivateTab(tabName, pageName) {
   everythingBelowTabs.classList.remove('runAnimation');
   const tabs = [document.getElementsByClassName('tab')];
   tabs.forEach((tab) => {
-    console.log(tab[0].classList);
     tab[0].classList.remove('active');
     tab[1].classList.remove('active');
     tab[2].classList.remove('active');
   })
-  // tabName.classList.remove('active');
   void everythingBelowTabs.offsetHeight;
   everythingBelowTabs.classList.add('runAnimation');
   tabName.classList.add('active');
   pageName();
 }
 
-
-
-
-
-  // iterate through, set all style displays to none
-  // if 'active' is found in classList
-  // replace with empty string?
-
-  // const switchActiveTab = function(newTab) {
-  //   const tabs = [document.getElementsByClassName('tab')];
-  //   tabs.forEach((tab) => {
-  //     if ([tab.classList].includes('active')) {
-  //       [tab.classList].replace('active', '');
-  //     }
-  //     if (tab.textContent === newTab) {
-  //       [tab.classList].add('active');
-  //     }
-  //   });
-  // }
-
-
-
-
 /* Tab switching logic */
 
 window.addEventListener('DOMContentLoaded', function() {
-  // switchActiveTab('Home');
+  fadeInContentandActivateTab(homeTab, homePage);
   homePage();
 });
 

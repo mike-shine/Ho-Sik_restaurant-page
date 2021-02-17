@@ -57,7 +57,8 @@ header.appendChild(h1);
   //// anchor tag with class next and an eventListener on plusSlides function, param of 1. text content is &#10095;
 
   const imageCarousel = document.createElement('div');
-  bodySection.appendChild(imageCarousel);
+  imageCarousel.style.width = '1500px';
+  // bodySection.appendChild(imageCarousel);
 
   const previousButton = document.createElement('a');
   previousButton.classList.add('previous');
@@ -69,7 +70,9 @@ header.appendChild(h1);
   nextButton.addEventListener('click', () => console.log('next image'));
   nextButton.textContent = '&#10095';
 
-  addImagesToCarousel('baoPic.jpg', '../public/images-on-homepage', 0, 3)
+  addImagesToCarousel('baoPic.jpg', '../public/images-on-homepage', 0, 3);
+  addImagesToCarousel('dimSumPic.jpg', '../public/images-on-homepage', 1, 3);
+  addImagesToCarousel('shrimpPic.jpg', '../public/images-on-homepage', 2, 3);
 
   function addImagesToCarousel(name, path, index, howManyPics) {
 

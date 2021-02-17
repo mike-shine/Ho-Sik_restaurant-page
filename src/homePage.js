@@ -96,7 +96,7 @@ header.appendChild(h1);
   }
 
   let imageIndex = 1;
-
+  displayImages(1);
   function changeImages(number) {
     displayImages(imageIndex += number);
   }

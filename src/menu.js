@@ -89,9 +89,6 @@ const menu = () => {
   addItemToMenu(vegetableSoup, soupItemsContainer, 'menuItem', 'menuItemName');
 
 
-  // 'Hot and Sour Soup - $4.49 \nWon Ton Soup - $4.49 \nSeafood Bean Curd Soup - $4.49 \nVegetable Soup - $4.49';
-
-
   /* noodles and rice menu section  */
 
   const noodlesAndRiceSection = document.createElement('div');
@@ -118,12 +115,6 @@ const menu = () => {
 
   const curryBeefNoodle = new MenuItem('Curry Beef Noodle', '8.99');
   addItemToMenu(curryBeefNoodle, noodlesAndRiceItemsContainer, 'menuItem', 'menuItemName');
-
-
-
-  // 'House Special Lo Mein - $8.99 \nCurry Beef Noodle - $8.99 ;
-
-
 
 
   /* chef specials menu section  */
@@ -241,11 +232,24 @@ const menu = () => {
   sideHeading.textContent = 'Side Orders';
   sideSection.appendChild(sideHeading);
 
-  const sideItems = document.createElement('p');
-  sideItems.classList.add('sectionItem');
-  sideItems.setAttribute('style', 'white-space: pre;');
-  sideItems.textContent = 'White or Brown Rice - $0.99 \nFried Rice (vegetarian) - $1.99 \nFried Rice (choice of chicken or pork) - $2.49 \nChinese Pickled Cucumber - $2.99 \nVegetable of the Day - $4.99  ';
-  sideSection.appendChild(sideItems);
+  const sideItemsContainer = document.createElement('div');
+  sideItemsContainer.classList.add('sectionItem');
+  sideSection.appendChild(sideItemsContainer);
+
+  const whiteOrBrownRice = new MenuItem('White or Brown Rice', '0.99');
+  addItemToMenu(whiteOrBrownRice, sideItemsContainer, 'menuItem', 'menuItemName');
+
+  const friedRiceSide = new MenuItem('Fried Rice', '1.99','add chicken - $1 \nadd BBQ pork - $1');
+  addItemToMenu(friedRiceSide, sideItemsContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+
+  const pickledCucumber = new MenuItem('Chinese Pickled Cucumber', '2.99');
+  addItemToMenu(pickledCucumber, sideItemsContainer, 'menuItem', 'menuItemName');
+
+  const veggieOfTheDay = new MenuItem('Vegetable of the Day', '4.99');
+  addItemToMenu(veggieOfTheDay, sideItemsContainer, 'menuItem', 'menuItemName');
+
+
+  // 'White or Brown Rice - $0.99 \nFried Rice (vegetarian) - $1.99 \nFried Rice (choice of chicken or pork) - $2.49 \nChinese Pickled Cucumber - $2.99 \nVegetable of the Day - $4.99  ';
 
 
 /* function that takes constructed items and puts it on the menu/DOM  */

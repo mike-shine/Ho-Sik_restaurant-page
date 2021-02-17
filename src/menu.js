@@ -105,15 +105,21 @@ const menu = () => {
   entreeSection.classList.add('bodyItem', "sectionParent");
   bodySection.appendChild(entreeSection);
 
-  const entreeHeading = document.createElement('h2');
-  entreeHeading.classList.add('sectionItem');
-  entreeHeading.textContent = 'Classic Entrees';
-  entreeSection.appendChild(entreeHeading);
+  const entreeHeadingContainer = document.createElement('div');
+  entreeHeadingContainer.classList.add('sectionItem');
+  entreeSection.appendChild(entreeHeadingContainer);
 
-  const entreeSubHeading = document.createElement('h6');
-  entreeSubHeading.classList.add('sectionItem', 'subHeading');
+  const entreeHeading = document.createElement('h2');
+  entreeHeading.classList.add('headingItem', 'mainHeading');
+  entreeHeading.textContent = 'Classic Entrees';
+  entreeHeadingContainer.appendChild(entreeHeading);
+
+  const entreeSubHeading = document.createElement('h5');
+  entreeSubHeading.classList.add('headingItem', 'subHeading');
+  entreeSubHeading.setAttribute('style', 'white-space: pre;');
   entreeSubHeading.textContent = 'Choice of Veggie, Pork, Chicken, \nTofu, Shrimp (+$1), or Steak (+$2)';
-  entreeSection.appendChild(entreeSubHeading);
+  entreeSubHeading.style.fontStyle = 'italic'
+  entreeHeadingContainer.appendChild(entreeSubHeading);
 
   const entreeItems = document.createElement('p');
   entreeItems.classList.add('sectionItem');

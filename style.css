@@ -83,4 +83,12 @@ p {
   margin-right: auto;
 }
 
+.mainHeading {
+  margin-bottom: 3px;
+}
+
+.subHeading {
+  margin-top: 0px;
+}
+
 

@@ -76,12 +76,6 @@ window.addEventListener('DOMContentLoaded', function() {
 
 /*  Ideas to implement if time permits
 
- - *IMPORTANT* Add meat selection option below Entree heading
-
- - Item descriptions for Chef Specials
-
- - For fried rice, etc, instead of separate items for adding meat, small text below states you can add given amount for a certain price
-
  - Image carousel on homepage
 
  - Family style dinner combo section

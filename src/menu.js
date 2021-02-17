@@ -249,7 +249,12 @@ const menu = () => {
   addItemToMenu(veggieOfTheDay, sideItemsContainer, 'menuItem', 'menuItemName');
 
 
-  // 'White or Brown Rice - $0.99 \nFried Rice (vegetarian) - $1.99 \nFried Rice (choice of chicken or pork) - $2.49 \nChinese Pickled Cucumber - $2.99 \nVegetable of the Day - $4.99  ';
+  const foodWarning = document.createElement('div');
+  foodWarning.classList.add('foodWarning');
+  foodWarning.textContent = '*Customers, be advised - Consumption of undercooked meat, poultry, eggs, or seafood may increase the risk of food-bourne illnesses.*';
+  bodySection.appendChild(foodWarning);
+
+
 
 
 /* function that takes constructed items and puts it on the menu/DOM  */

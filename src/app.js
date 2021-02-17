@@ -13,9 +13,15 @@ contentDiv.appendChild(allTabs);
 const homeTab = document.createElement('button');
 homeTab.classList.add('tab');
 homeTab.textContent = 'Home';
-homeTab.addEventListener('click', () => {
+homeTab.addEventListener('click', (e) => {
   contentGoesHere.innerHTML = '';
   // switchActiveTab('Home');
+  e.preventDefault();
+  everythingBelowTabs.classList.remove('runAnimation');
+  homeTab.classList.remove('active');
+  void everythingBelowTabs.offsetHeight;
+  everythingBelowTabs.classList.add('runAnimation');
+  homeTab.classList.add('active');
   homePage();
 });
 allTabs.appendChild(homeTab);
@@ -23,29 +29,51 @@ allTabs.appendChild(homeTab);
 const menuTab = document.createElement('button');
 menuTab.classList.add('tab');
 menuTab.textContent = 'Menu';
-menuTab.addEventListener('click', () => {
+menuTab.addEventListener('click', (e) => {
   contentGoesHere.innerHTML = '';
   // switchActiveTab('Menu');
+  e.preventDefault();
+  everythingBelowTabs.classList.remove('runAnimation');
+  menuTab.classList.remove('active');
+  void everythingBelowTabs.offsetHeight;
+  everythingBelowTabs.classList.add('runAnimation');
+  menuTab.classList.add('active');
   menu();
-});
+}, false);
 allTabs.appendChild(menuTab);
 
 const contactTab = document.createElement('button');
 contactTab.classList.add('tab');
 contactTab.textContent = 'Contact Us';
-contactTab.addEventListener('click', () => {
+contactTab.addEventListener('click', (e) => {
   contentGoesHere.innerHTML = '';
   // console.log(document.getElementsByClassName('tab')[0].textContent);
   // switchActiveTab('Contact Us');
-  contactUs();
+  e.preventDefault();
+  fadeInContentandActivateTab(contactTab, contactUs);
+  // everythingBelowTabs.classList.remove('runAnimation');
+  // contactTab.classList.remove('active');
+  // void everythingBelowTabs.offsetHeight;
+  // everythingBelowTabs.classList.add('runAnimation');
+  // contactTab.classList.add('active');
+  // contactUs();
 
-});
+}, false);
 allTabs.appendChild(contactTab);
 
 const everythingBelowTabs = document.createElement('div');
 everythingBelowTabs.setAttribute('id', 'contentGoesHere');
 everythingBelowTabs.setAttribute('class', 'tabContent');
 contentDiv.appendChild(everythingBelowTabs);
+
+function fadeInContentandActivateTab(tabName, pageName) {
+  everythingBelowTabs.classList.remove('runAnimation');
+  tabName.classList.remove('active');
+  void everythingBelowTabs.offsetHeight;
+  everythingBelowTabs.classList.add('runAnimation');
+  tabName.classList.add('active');
+  pageName();
+}
 
 
 

@@ -43,16 +43,28 @@ p {
 }
 
 .active {
-  background-color: #ccc;
+  background-color: #ffe4cd;
+  color:#232b2b;
 }
 
-.tabContent {
+/* .tabContent {
   animation: fadeEffect 1s;
+} */
+
+.runAnimation {
+  position: relative;
+  animation: fadeEffect 0.5s;
 }
 
 @keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+    bottom: -500px;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
 }
 
 .headerParent {

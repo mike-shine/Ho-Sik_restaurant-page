@@ -102,13 +102,27 @@ const menu = () => {
   const chefSpecialsItemContainer = document.createElement('div');
   chefSpecialsItemContainer.classList.add('sectionItem');
   chefSpecialsSection.appendChild(chefSpecialsItemContainer);
-  /*
-  const tofuSoup = new MenuItem('Tofu Soup', '9.99', 'A rich soup with tofu and vegetables.');
-  putItemOnMenu(tofuSoup, chefSpecialsItemContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
-*/
 
+  /* Chef's specials being constructed and added to menu  */
 
-  // 'Ma Po Tofu - $10.99 \nJalapeño Chicken - $11.99 \nOrange Sesame Beef - $12.99 \nShrimp with Lobster Sauce - $11.99 \nSeafood Delight - $15.99 \nSalt & Black Pepper Squid - $15.99  ';
+  const maPoTofu = new MenuItem('Ma Po Tofu', '10.99', 'Spicy home-style sauce slow cooked with soft tofu, \npeas, and carrots');
+  addItemToMenu(maPoTofu, chefSpecialsItemContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+
+  const jalepenoChicken = new MenuItem('Jalepeno Chicken', '11.99', 'Jalepeno home-style sauce, thigh meat, green bell peppers, \nred bell peppers, and white onion');
+  addItemToMenu(jalepenoChicken, chefSpecialsItemContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+
+  const orangeSesameBeef = new MenuItem('Orange Sesame Beef', '12.99', 'Sweet chili red-brown glaze, broccoli topped with  \norange peel');
+  addItemToMenu(orangeSesameBeef, chefSpecialsItemContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+
+  const shrimpWithLobsterSauce = new MenuItem('Shrimp with Lobster Sauce', '11.99', 'Creamy egg sauce, shrimp, water chestnuts, peas, \nand carrots');
+  addItemToMenu(shrimpWithLobsterSauce, chefSpecialsItemContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+
+  const seafoodDelight = new MenuItem('Seafood Delight', '15.99', 'White sauce, scallop, shrimp, imitation crab meat, \nbroccoli, snow peas, green bell peppers, mushroom, \nwater chestnuts, bamboo shoots, Chinese cabbage, \nbaby corn and carrots');
+  addItemToMenu(seafoodDelight, chefSpecialsItemContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+
+  const saltAndBlackPepperSquid = new MenuItem('Salt and Black Pepper Squid', '15.99', 'Sauteed squid with green bell peppers, red bell \npeppers, and white onion');
+  addItemToMenu(saltAndBlackPepperSquid, chefSpecialsItemContainer, 'menuItem', 'menuItemName', 'menuItemDescription');
+
 
 
   /* entree menu section  */
@@ -162,7 +176,7 @@ const menu = () => {
 
 /* function that takes constructed items and puts it on the menu/DOM  */
 
-  function putItemOnMenu(menuItem, container, itemClass, itemNameClass, itemDescriptionClass) {
+  function addItemToMenu(menuItem, container, itemClass, itemNameClass, itemDescriptionClass) {
     const name = menuItem.name;
     const price = menuItem.price;
     const description = menuItem.description;

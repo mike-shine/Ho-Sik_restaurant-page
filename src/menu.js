@@ -157,7 +157,7 @@ const menu = () => {
   /* entree menu section  */
 
   const entreeSection = document.createElement('div');
-  entreeSection.classList.add('bodyItem', "sectionParent");
+  entreeSection.classList.add(/*'bodyItem',*/ "sectionParent", 'entreeGrow');
   bodySection.appendChild(entreeSection);
 
   const entreeHeadingContainer = document.createElement('div');
@@ -177,7 +177,7 @@ const menu = () => {
   entreeHeadingContainer.appendChild(entreeSubHeading);
 
   const entreeItemsContainer = document.createElement('div');
-  entreeItemsContainer.classList.add('sectionItem');
+  entreeItemsContainer.classList.add(/*'sectionItem', */'entreeItems');
   entreeSection.appendChild(entreeItemsContainer);
 
   /* Entrees being constructed and added to menu  */

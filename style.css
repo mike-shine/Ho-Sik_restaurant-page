@@ -11,6 +11,7 @@ h1 {
 h2 {
   font-size: 48px;
   font-family: 'TAKOYAKI';
+  /* border: 2px dotted cornflowerblue; */
 }
 
 p {
@@ -21,15 +22,44 @@ button {
   font-size: 36px;
 }
 
+.menuItem {
+  /* border: 2px dotted firebrick; */
+  width: fit-content;
+  margin-top: 1px;
+  flex: wrap;
+}
+
 .menuItemName {
   font-size: 24px;
   margin-bottom: 0;
+  /* border: 1px solid blueviolet; */
+  margin-top: 1px;
+  width: fit-content;
+  max-height: 850px;
 }
 
 .menuItemDescription {
   font-size: 18px;
   font-style: italic;
   margin-top: 1px;
+  /* border: 1px solid cyan; */
+  width: fit-content;
+}
+
+.sectionItem {
+  width: fit-content;
+  /* border: 2px groove yellowgreen; */
+  display: flex;
+  flex-direction: column;
+}
+
+.entreeItems {
+  width: 1000px;
+  /* border: 5px groove springgreen; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-flow: column;
 }
 
 
@@ -81,6 +111,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  /* border: 3px solid deeppink; */
 }
 
 .bodyParent {
@@ -89,21 +120,45 @@ button {
   width: 1500px;
   margin-left: 12%;
   justify-content: space-between;
+  /* border: 3px dotted chartreuse; */
+  flex-basis: 50%;
 
 }
 
 .bodyItem {
   margin-left: auto;
   margin-right: auto;
+  /* border: 3px solid darkorchid; */
+  /* flex: 2 1; */
+}
+
+.entreeGrow {
+  /* width: 1200px; */
+  /* flex: 3; */
+  /* border: 3px solid orangered; */
+  margin-right: 0px;
+  flex-basis: 60%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-height: 850px;
+  overflow: hidden;
+}
+
+.sectionParent {
+  max-height: 1250px;
 }
 
 .mainHeading {
   margin-bottom: 1.5px;
+  width: fit-content;
+  /* border: 2px solid coral; */
 }
 
 .subHeading {
   margin-top: 0px;
   font-size: 16px;
+  width: fit-content;
+  /* border: 2px solid lawngreen; */
 }
 
 .imageCarousel {
